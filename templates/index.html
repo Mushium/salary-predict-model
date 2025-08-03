@@ -5,6 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salary Prediction Model</title>
     <style>
+
+    select {
+        width: 200px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+        color: #333;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        appearance: none; /* Removes default arrow/styling */
+        background-image: url('data:image/svg+xml;utf8,<svg fill="%23333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>'); /* Custom arrow */
+        background-repeat: no-repeat;
+        background-position: right 10px center;
+        background-size: 20px;
+    }
+
+    select:focus {
+        outline: none;
+        border-color: #007bff;
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    }
+
+    /* Styling options (limited) */
+    select option {
+        background-color: #fff;
+        color: #333;
+    }
+
         body {
             font-family: 'Roboto', sans-serif;
             background: linear-gradient(120deg, #6dd5ed, #2193b0);
@@ -98,18 +127,34 @@
             </div>
 
             <div class="form-group">
-                <label for="email">Gender</label>
-                <input type="text" id="gender" name="email" placeholder="Male or Female" required>
+                <label for="genders">Gender</label>
+                <select name="Gender" id="gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                </select>
             </div>
 
             <div class="form-group">
                 <label for="phone">Department</label>
-                <input type="text" id="department" name="phone" placeholder="Engineering, Sales, Finance, etc " required>
+                <select name="Department" id="department">
+                <option value="Engineering">Engineering</option>
+                <option value="Sales">Sales</option>
+                <option value="Finance">Finance</option>
+                <option value="HR">HR</option>
+                <option value="Marketing">Marketing</option>
+                <option value="Product">Product</option>
+                </select>
             </div>
 
             <div class="form-group">
                 <label for="username">Job Title</label>
-                <input type="text" id="title" name="username" placeholder="Engineer, Executive, Intern, etc " required>
+                <select name="Title" id="title">
+                <option value="Engineer">Engineer</option>
+                <option value="Executive">Executive</option>
+                <option value="Intern">Intern</option>
+                <option value="Analyst">Analyst</option>
+                <option value="Manager">Manager</option>
+                </select>
             </div>
 
             <div class="form-group">
@@ -119,7 +164,11 @@
 
             <div class="form-group">
                 <label for="confirm-password">Education Level</label>
-                <input type="text" id="education" name="confirm-password" placeholder="Bachelor, Master, PhD" required>
+                <select name="Education" id="education">
+                <option value="Bachelor">Bachelor</option>
+                <option value="Master">Master</option>
+                <option value="PhD">PhD</option>
+                </select>
             </div>
 
             <div class="form-group">
